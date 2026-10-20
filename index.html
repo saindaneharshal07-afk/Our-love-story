@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +24,7 @@ body {
   min-height: 100vh;
   color: var(--light);
   font-family: 'Poppins', sans-serif;
-  background:
-    radial-gradient(ellipse at top, #56145a 0%, #2b0b3a 45%, #13051c 100%);
+  background: radial-gradient(ellipse at top, #56145a 0%, #2b0b3a 45%, #13051c 100%);
   overflow-x: hidden;
 }
 button { font: inherit; }
@@ -40,7 +38,10 @@ button { font: inherit; }
   animation: twinkle 2s infinite alternate;
   box-shadow: 0 0 9px #fff;
 }
-@keyframes twinkle { from {opacity:.2; transform:scale(.7)} to {opacity:1;transform:scale(1.4)} }
+@keyframes twinkle {
+  from { opacity:.2; transform:scale(.7) }
+  to { opacity:1; transform:scale(1.4) }
+}
 .float-heart {
   position: absolute; bottom: -40px; opacity: 0;
   animation: floatUp linear forwards;
@@ -83,7 +84,10 @@ p { line-height:1.8; }
 }
 .btn:hover { transform:translateY(-2px); filter:brightness(1.12); }
 .btn.secondary { background:#ffffff10; }
-.actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.actions {
+  display:flex; justify-content:center; flex-wrap:wrap;
+  gap:12px; margin-top:24px;
+}
 .small-note { font-size:.78rem; opacity:.7; margin-top:15px; }
 
 /* Gift */
@@ -116,7 +120,9 @@ p { line-height:1.8; }
   border:9px solid #ffd1f6; border-radius:50% 50% 50% 0;
   left:15px; top:-7px; transform:rotate(35deg);
 }
-.gift-wrap.opened .gift-lid { transform:translate(-30px,-65px) rotate(-30deg); }
+.gift-wrap.opened .gift-lid {
+  transform:translate(-30px,-65px) rotate(-30deg);
+}
 @keyframes bob { 50% { transform:translateY(-8px) rotate(2deg); } }
 
 /* CSS panda */
@@ -128,7 +134,8 @@ p { line-height:1.8; }
   position:absolute; width:37px; height:37px; border-radius:50%;
   background:#211628; top:0;
 }
-.panda .ear.left { left:9px; } .panda .ear.right { right:9px; }
+.panda .ear.left { left:9px; }
+.panda .ear.right { right:9px; }
 .panda .face {
   position:absolute; width:100px; height:91px; left:8px; top:12px;
   border-radius:48% 48% 45% 45%; background:#fff7f5;
@@ -138,12 +145,14 @@ p { line-height:1.8; }
   position:absolute; top:35px; width:27px; height:34px;
   border-radius:50%; background:#302234; transform:rotate(18deg);
 }
-.panda .patch.left { left:26px; } .panda .patch.right { right:26px; transform:rotate(-18deg); }
+.panda .patch.left { left:26px; }
+.panda .patch.right { right:26px; transform:rotate(-18deg); }
 .panda .eye {
   position:absolute; top:45px; width:7px; height:9px;
   background:white; border-radius:50%;
 }
-.panda .eye.left { left:36px; } .panda .eye.right { right:36px; }
+.panda .eye.left { left:36px; }
+.panda .eye.right { right:36px; }
 .panda .nose {
   position:absolute; top:60px; left:52px; width:11px; height:8px;
   border-radius:50%; background:#382336;
@@ -152,11 +161,16 @@ p { line-height:1.8; }
   position:absolute; top:62px; width:14px; height:8px;
   background:#f4a5c8; border-radius:50%; opacity:.8;
 }
-.panda .cheek.left { left:19px; } .panda .cheek.right { right:19px; }
-@keyframes pandaBob { 50% { transform:translateY(-7px) rotate(2deg); } }
+.panda .cheek.left { left:19px; }
+.panda .cheek.right { right:19px; }
+@keyframes pandaBob {
+  50% { transform:translateY(-7px) rotate(2deg); }
+}
 
 /* Story timeline */
-.story-list { width:min(100%,620px); text-align:left; margin:16px auto 0; }
+.story-list {
+  width:min(100%,620px); text-align:left; margin:16px auto 0;
+}
 .story {
   position:relative; margin:0 0 14px 14px; padding:17px 18px;
   border:1px solid #ffffff25; border-radius:17px;
@@ -164,11 +178,12 @@ p { line-height:1.8; }
   box-shadow:0 8px 30px #00000015;
 }
 .story:before {
-  content:""; position:absolute; left:-20px; top:23px; width:9px; height:9px;
-  border-radius:50%; background:#f4a7ed; box-shadow:0 0 12px #f4a7ed;
+  content:""; position:absolute; left:-20px; top:23px;
+  width:9px; height:9px; border-radius:50%;
+  background:#f4a7ed; box-shadow:0 0 12px #f4a7ed;
 }
 .story .date { color:#f5a9ed; font-size:.75rem; letter-spacing:1px; }
-.story h3 { margin:5px 0 4px; font-size:1.05rem; }
+.story h3 { margin:5px 0 8px; font-size:1.05rem; }
 .story p { margin:0; font-size:.88rem; color:#f3def3; }
 
 /* Gallery */
@@ -189,9 +204,13 @@ p { line-height:1.8; }
   background:radial-gradient(circle,#793b7d,#2b0b3a);
   color:#ffeaff;
 }
-.photo-fallback strong { font-family:'Dancing Script',cursive; font-size:2rem; }
+.photo-fallback strong {
+  font-family:'Dancing Script',cursive; font-size:2rem;
+}
 .photo-fallback span { font-size:.8rem; margin-top:8px; }
-.photo-caption h3 { font-family:'Dancing Script',cursive; font-size:2rem; margin:14px 0 3px; }
+.photo-caption h3 {
+  font-family:'Dancing Script',cursive; font-size:2rem; margin:14px 0 3px;
+}
 .photo-caption p { margin:0 0 8px; color:#f1d9f1; font-size:.88rem; }
 .dots { display:flex; gap:8px; justify-content:center; margin-top:16px; }
 .dot {
@@ -208,7 +227,15 @@ p { line-height:1.8; }
   box-shadow:0 15px 50px #00000028;
 }
 .letter p { color:#f8e5f7; font-size:.94rem; }
-.letter .signature { font-family:'Dancing Script',cursive; font-size:1.8rem; color:#ffbff6; }
+.letter .letter-greeting {
+  font-family:'Dancing Script',cursive;
+  font-size:1.9rem; color:#ffbff6;
+}
+.letter .signature {
+  font-family:'Dancing Script',cursive;
+  font-size:1.35rem; line-height:1.8; color:#ffbff6;
+  overflow-wrap:anywhere;
+}
 
 /* Proposal */
 .proposal-card {
@@ -217,7 +244,10 @@ p { line-height:1.8; }
   background:linear-gradient(145deg,#ffffff12,#ffffff05);
   box-shadow:0 15px 50px #00000025;
 }
-.proposal-buttons { position:relative; display:flex; align-items:center; justify-content:center; gap:15px; min-height:64px; margin-top:20px; }
+.proposal-buttons {
+  position:relative; display:flex; align-items:center;
+  justify-content:center; gap:15px; min-height:64px; margin-top:20px;
+}
 #noBtn { position:relative; }
 #yesBtn { min-width:115px; }
 #celebration { min-height:50px; color:#ffd2fa; font-size:.95rem; margin-top:15px; }
@@ -228,15 +258,23 @@ p { line-height:1.8; }
 @keyframes burst {
   0% { opacity:0; transform:translate(0,0) scale(.4); }
   15% { opacity:1; }
-  100% { opacity:0; transform:translate(var(--dx),var(--dy)) scale(1.7) rotate(35deg); }
+  100% {
+    opacity:0;
+    transform:translate(var(--dx),var(--dy)) scale(1.7) rotate(35deg);
+  }
 }
 footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:center; }
+
 @media(min-width:700px) {
   .screen { padding-top:40px; padding-bottom:55px; }
   .story-list { padding-left:10px; }
 }
 @media(prefers-reduced-motion:reduce) {
-  *, *:before, *:after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
+  *, *:before, *:after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+  }
 }
 </style>
 </head>
@@ -246,9 +284,11 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
 <div id="hearts"></div>
 
 <main>
+
   <!-- SCREEN 1: GIFT -->
   <section class="screen active" id="screen1">
     <span class="pill">A LITTLE SURPRISE FOR YOU</span>
+
     <div class="gift-wrap" id="gift" role="button" tabindex="0" aria-label="Open the gift">
       <div class="gift">
         <div class="gift-bow"></div>
@@ -256,6 +296,7 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
         <div class="gift-box"></div>
       </div>
     </div>
+
     <h1 class="glow">Something Special<br>For You 💜</h1>
     <p class="subtitle">A tiny world made of our memories, little moments, and lots of love.</p>
     <button class="btn" id="openGift">Open Your Gift ✨</button>
@@ -264,39 +305,52 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
 
   <!-- SCREEN 2: OUR STORY -->
   <section class="screen" id="screen2">
-    <span class="pill">CHAPTER ONE</span>
+    <span class="pill">HAMARI KAHANI ❤️</span>
+
     <div class="panda" aria-label="Cute animated panda">
-      <div class="ear left"></div><div class="ear right"></div>
+      <div class="ear left"></div>
+      <div class="ear right"></div>
       <div class="face"></div>
-      <div class="patch left"></div><div class="patch right"></div>
-      <div class="eye left"></div><div class="eye right"></div>
-      <div class="nose"></div><div class="cheek left"></div><div class="cheek right"></div>
+      <div class="patch left"></div>
+      <div class="patch right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
     </div>
-    <h2 class="glow">Our Little Story 🐼</h2>
-    <p class="subtitle">Some moments become memories. Some people become your favourite part of every day.</p>
+
+    <h2 class="glow">Hamaari Journey Ke Khas Moments 💗</h2>
+    <p class="subtitle">Meri favourite memories, aapke saath. 🥹❤️</p>
 
     <div class="story-list">
+
       <article class="story">
         <span class="date">CHAPTER 01 · THE BEGINNING</span>
-        <h3>When Our Story Began ✨</h3>
-        <p>Every beautiful story has a beginning. Ours became a little world of its own, one moment at a time.</p>
+        <h3>Hamaari Pehli Mulaqat 🏫</h3>
+        <p>Pata nahi hum pehli baar kab mile the... Par jab aapko college admission ke time dekha tha, tab bilkul nahi laga tha ki aapse milunga, baat karunga ya hum relationship mein aayenge! Har evening aapko scooty se jaate hue dekhta tha, tab bhi kuch socha nahi tha. Lekin kehte hain na, kuch logon ko God pehle se hi plan karke bhejta hai... Hamaara milna koi coincidence nahi tha! 🌸✨</p>
       </article>
+
       <article class="story">
-        <span class="date">CHAPTER 02 · THE LITTLE THINGS</span>
-        <h3>Little Moments, Big Feelings 💗</h3>
-        <p>It's the tiny conversations, the random smiles, and the little things that make our memories special.</p>
+        <span class="date">CHAPTER 02 · WHEN HEARTS CONNECTED</span>
+        <h3>Jab Dil Se Dil Mila 🥺💖</h3>
+        <p>Jab aapse baatein hone lagi aur aapko mujhpar trust hua... Aapne apni feelings aur apna dard ek anjaan ladke se share kiya, woh baatein jo shayad aap kisi aur ko bata bhi nahi sakte the. Aap mujhe daantte bhi the aur pyaar bhi karte the... Tab mujhe bhi feelings aane lagi thi, par samajh nahi aata tha ki isko hi pyaar kehte hain! ❤️</p>
       </article>
+
       <article class="story">
-        <span class="date">CHAPTER 03 · MY FAVOURITE PERSON</span>
-        <h3>You Make Days Brighter 🌷</h3>
-        <p>Even an ordinary day can feel beautiful when there is someone who makes you smile without trying.</p>
+        <span class="date">CHAPTER 03 · OUR SPECIAL DAY</span>
+        <h3>Confession Day – 19 June 2026 🙈🎉</h3>
+        <p>Meri toh himmat nahi thi bolne ki, par 19 June ko jab aapne khud confess kiya, toh mujhe yakeen hi nahi ho raha tha! Main andar se itna khush tha ki poore ghar mein monkey ki tarah uchhal raha tha! 🐒💃 Ye din mere liye hamesha super special rahega... 💖</p>
       </article>
+
       <article class="story">
-        <span class="date">CHAPTER 04 · MORE TO COME</span>
-        <h3>Our Story Isn't Finished 🌙</h3>
-        <p>There are still new memories to make, new laughs to share, and little moments waiting for us.</p>
+        <span class="date">CHAPTER 04 · OUR FIRST DATE</span>
+        <h3>Hamaari First Date – 2 July 2026 🍦✨</h3>
+        <p>2 July ki hamaari pehli date... Uss din aapse milne ke baad bohot achha laga tha! Main toh thoda shake bhi kar raha tha... Woh pehla hug, woh pehli kiss aur aapka woh bohot saara pyaar... sab kuch bohot special tha! Mujhe aapke saath aise hi hazaaron moments jeene hain! 🧸❤️</p>
       </article>
+
     </div>
+
     <div class="actions">
       <button class="btn secondary" data-go="screen1">← Back</button>
       <button class="btn" data-go="screen3">Our Memories 📸</button>
@@ -305,48 +359,86 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
 
   <!-- SCREEN 3: PHOTO GALLERY -->
   <section class="screen" id="screen3">
-    <span class="pill">CHAPTER TWO</span>
+    <span class="pill">OUR MEMORIES 📸</span>
     <h2 class="glow">Our Sweet Memories 📸</h2>
     <p class="subtitle">Every picture keeps a little piece of a beautiful moment.</p>
 
     <div class="gallery-shell">
       <div class="gallery-card">
         <div class="photo-frame">
-          <img id="memoryImage" src="memory1.jpg" alt="Our memory">
+          <img id="memoryImage" src="photo1.jpg" alt="Our memory">
           <div class="photo-fallback" id="photoFallback">
             <strong>Your memory goes here 💜</strong>
-            <span>Add the photo using the filename shown in the code.</span>
+            <span>Check the photo filename in your repository.</span>
           </div>
         </div>
+
         <div class="photo-caption">
           <h3 id="memoryTitle">Our First Memory</h3>
           <p id="memoryDescription">A little moment worth keeping forever. 💜</p>
         </div>
       </div>
+
       <div class="dots" id="galleryDots" aria-label="Choose a photo"></div>
+
       <div class="actions">
         <button class="btn secondary" id="previousPhoto">← Previous</button>
         <button class="btn" id="nextPhoto">Next →</button>
       </div>
     </div>
+
     <div class="actions">
       <button class="btn secondary" data-go="screen2">← Our Story</button>
       <button class="btn" data-go="screen4">Read My Letter 💌</button>
     </div>
   </section>
 
-  <!-- SCREEN 4: LOVE LETTER -->
+  <!-- SCREEN 4: PERSONAL LOVE LETTER -->
   <section class="screen" id="screen4">
-    <span class="pill">CHAPTER THREE</span>
-    <h2 class="glow">A Letter From My Heart 💌</h2>
+    <span class="pill">FROM MY HEART 💌</span>
+    <h2 class="glow">Mere Bacchiiiiii Ke Naam 💗</h2>
+
     <div class="letter">
-      <p class="script">My favourite person,</p>
-      <p>Sometimes it's difficult to put feelings into words, but I still want to try. You bring little moments of happiness into ordinary days, and the memories we share mean more to me than you might know.</p>
-      <p>I love the small things: the conversations, the laughter, the silly moments, and all the memories that become special simply because we shared them.</p>
-      <p>I can't promise every day will be perfect, but I hope we keep choosing kindness, honesty, understanding, and making beautiful memories together.</p>
-      <p>Thank you for being a special part of my story. Here's to the little moments we have already shared and the lovely ones still waiting for us. 💜</p>
-      <p class="signature">With lots of love, always ✨</p>
+      <p class="letter-greeting">Bacchiiiiii, suno na... 🌸</p>
+
+      <p>Vaise toh hum roz hi baatein karte hain, lekin aaj kuch special hai... ✨ Aaj main aapse apne dil ki kuch baatein kehna chahta hoon.</p>
+
+      <p>Bacchiiiiii, main jab bhi aapke baare mein sochta hoon na, ya aapki pic dekhta hoon, toh mere chehre par ek alag si smile aa jaati hai... Andar se bohot hi zyada khush ho jaata hoon main! 🥺💖</p>
+
+      <p>Kabhi-kabhi main aapke saath apna future imagine karne lagta hoon. Aapse shaadi hoti hai, main hamesha aapke saath rehta hoon... Ye sab sochkar itna khush ho jaata hoon ki bata bhi nahi sakta! 💍✨</p>
+
+      <p>Hamari first date yaad hai? Woh sach mein bohot hi zyada special hai mere liye. Main use kabhi nahi bhool sakta! Bacchiiiiii, mujhe sach mein kabhi nahi laga tha ki koi mujhe hug aur kiss karega... Ye toh door ki baat hai, maine toh ye bhi nahi socha tha ki koi mujhe itna pyaar de sakta hai. Lekin aapne diya mujhe! 🥺❤️</p>
+
+      <p>Aapke saath bitaya hua har ek pal mere liye special hai. Aapki ek smile se main itna khush ho jaata hoon, jitna shayad koi prize milne par bhi nahi hota! 🎁💖</p>
+
+      <p>Har baar aapne mujhe support kiya hai. Jab tension hoti thi, tab aapne mujhe shaant kiya; jab main overthink karta tha, tab bhi aapne mujhe sambhala.</p>
+
+      <p>Lekin Bacchiiiiii, isi baat ko lekar main overthink bhi karta hoon ki hum ek kaise honge, ya kahin aap mujhe chhodkar na chale jao... Bas aapko khone ka darr laga rehta hai. 💔</p>
+
+      <p>Bacchiiiiii, aapko kisi baat ke liye daantne ka mann nahi hota yaar. Lekin jab koi aakar aapko 'I like you' bolkar jaata hai, toh meri haalat kharab ho jaati hai na! Isiliye kabhi-kabhi jealous aur possessive ho jaata hoon. Aapko kisi aur ke saath imagine karna bhi mere liye mushkil hota hai. 🥺</p>
+
+      <p>Future mein bhi main aapke saath hi apni zindagi dekhna chahta hoon. Main chahta hoon ki hum dono ek-doosre ko chunein aur hamesha ek-doosre ka saath dein. Aap mere ho aur main aapka! 🔒❤️</p>
+
+      <p>Aap mere liye sach mein bohot hi zyada maayne rakhte ho. Aap mere liye bohot important ho. Main aapke liye bohot kuch karne ke liye tayyar hoon, bas aapse door nahi hona chahta. Maanta hoon ki kabhi-kabhi aapko hurt kar deta hoon, lekin main sach mein aapse bohot hi zyada pyaar karta hoon! Aap meri chhotisi cutie Bacchiiiiii ho! 🧸💖</p>
+
+      <p>Mujhe ye safar hamesha ke liye chahiye. Jab se aap meri life mein aaye ho, meri life poori tarah badal gayi hai. Main pehle se bohot zyada khush rehne laga hoon. Pehle akela rehta tha, lekin aapke aane ke baad aapke saath zindagi jeene ke sapne dekhna seekh gaya hoon! ✨</p>
+
+      <p>Kabhi-kabhi lagta hai ki bas hamesha aapke paas rahoon, har second aapke saath rahoon... Lekin abhi woh time aaya nahi hai. Bas jaldi se woh waqt aa jaaye jab hum har samay saath reh sakein... Koi humein disturb karne wala na ho, aur hamari ek pyaari si chhotisi alag duniya ho, jahan sirf hum dono hon! 🌍💖</p>
+
+      <p>Bacchiiiiii, main sach bata raha hoon... Aap nahi, toh aapke alawa koi aur nahi! Mujhe aapse hi shaadi karni hai aur aapse hi karunga... 💍✨</p>
+
+      <p>Aur yahi chhota sa surprise hai mera aapke liye. Umeed hai aapko pasand aayega... 😘😘😘😘😘</p>
+
+      <p class="signature">
+        Hamesha sirf aapka… ❤️<br><br>
+        Aapki pyaari rasmalaiiiii 🍮💗<br>
+        Aapka chutusaa bacchaaaaa 🧸🥹<br>
+        Aapka Captain 🫡❤️<br>
+        Aapka Patidev 💍🤭<br><br>
+        Sab kuch, lekin sirf aapka..!! ❤️‍🩹🔐
+      </p>
     </div>
+
     <div class="actions">
       <button class="btn secondary" data-go="screen3">← Memories</button>
       <button class="btn" data-go="screen5">One Last Surprise 👑</button>
@@ -356,26 +448,37 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
   <!-- SCREEN 5: PROPOSAL -->
   <section class="screen" id="screen5">
     <span class="pill">ONE LAST LITTLE QUESTION</span>
+
     <div class="panda" aria-label="Cute animated panda">
-      <div class="ear left"></div><div class="ear right"></div>
+      <div class="ear left"></div>
+      <div class="ear right"></div>
       <div class="face"></div>
-      <div class="patch left"></div><div class="patch right"></div>
-      <div class="eye left"></div><div class="eye right"></div>
-      <div class="nose"></div><div class="cheek left"></div><div class="cheek right"></div>
+      <div class="patch left"></div>
+      <div class="patch right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
     </div>
+
     <div class="proposal-card">
       <h1 class="glow">My Little Princess 👑</h1>
       <p class="subtitle">Will you keep making beautiful memories with me? 💗</p>
+
       <div class="proposal-buttons">
         <button class="btn" id="yesBtn">YES! 💖</button>
         <button class="btn secondary" id="noBtn">NO 🙈</button>
       </div>
+
       <div id="celebration" aria-live="polite"></div>
     </div>
+
     <div class="actions">
       <button class="btn secondary" data-go="screen4">← Love Letter</button>
     </div>
   </section>
+
 </main>
 
 <footer>Made with a little magic and lots of love 💜</footer>
@@ -383,33 +486,33 @@ footer { color:#c9a7cd; font-size:.75rem; padding:10px 20px 28px; text-align:cen
 <script>
 /* =========================================================
    YOUR PHOTOS:
-   Upload these five image files to the SAME repository folder
-   as index.html. Keep the filenames exactly as written below.
-   You can change the titles and descriptions here too.
+   Upload photo1.jpg to photo5.jpg into the same repository
+   folder as index.html. Filenames must match exactly.
    ========================================================= */
+
 const memoriesData = [
   {
-    image: "memory1.jpg",
+    image: "photo1.jpg",
     title: "Our First Memory",
     description: "A little moment worth keeping forever. 💜"
   },
   {
-    image: "memory2.jpg",
+    image: "photo2.jpg",
     title: "My Favourite Smile",
     description: "Some smiles make an ordinary day feel special. ✨"
   },
   {
-    image: "memory3.jpg",
+    image: "photo3.jpg",
     title: "Little Moments",
     description: "It's the small things that become the sweetest memories. 🌷"
   },
   {
-    image: "memory4.jpg",
+    image: "photo4.jpg",
     title: "Us Together",
     description: "A lovely little chapter in our story. 🫶"
   },
   {
-    image: "memory5.jpg",
+    image: "photo5.jpg",
     title: "More Memories To Come",
     description: "Here's to many more happy moments ahead. 💕"
   }
@@ -417,6 +520,7 @@ const memoriesData = [
 
 /* Starry background */
 const sky = document.getElementById("sky");
+
 for (let i = 0; i < 95; i++) {
   const star = document.createElement("span");
   star.className = "star";
@@ -431,129 +535,174 @@ for (let i = 0; i < 95; i++) {
 function createHeart() {
   const layer = document.getElementById("hearts");
   const heart = document.createElement("span");
+
   heart.className = "float-heart";
-  heart.textContent = ["💜", "💕", "♡", "💗", "✨"][Math.floor(Math.random() * 5)];
+  heart.textContent = ["💜", "💕", "♡", "💗", "✨"][
+    Math.floor(Math.random() * 5)
+  ];
   heart.style.left = Math.random() * 100 + "%";
   heart.style.fontSize = (12 + Math.random() * 19) + "px";
   heart.style.animationDuration = (7 + Math.random() * 8) + "s";
+
   layer.appendChild(heart);
   setTimeout(() => heart.remove(), 16000);
 }
+
 setInterval(createHeart, 650);
 
 /* Navigation */
 function showScreen(id) {
   document.querySelectorAll(".screen").forEach(screen => {
-    screen.classList.toggle("active", screen.id === id);
+   screen.classList.toggle("active", screen.id === id);
   });
+
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
 document.querySelectorAll("[data-go]").forEach(button => {
-  button.addEventListener("click", () => showScreen(button.dataset.go));
+  button.addEventListener("click", () => {
+    showScreen(button.dataset.go);
+  });
 });
 
 /* Gift opening */
 const gift = document.getElementById("gift");
+let giftOpened = false;
+
 function openGift() {
+  if (giftOpened) return;
+  giftOpened = true;
+
   gift.classList.add("opened");
-  document.getElementById("openGift").textContent = "Opening your surprise… 💜";
+  document.getElementById("openGift").textContent =
+    "Opening your surprise… 💜";
+
   setTimeout(() => showScreen("screen2"), 850);
 }
+
 gift.addEventListener("click", openGift);
+
 gift.addEventListener("keydown", event => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     openGift();
   }
 });
+
 document.getElementById("openGift").addEventListener("click", openGift);
 
 /* Photo gallery */
 let currentPhoto = 0;
+
 const imageElement = document.getElementById("memoryImage");
 const fallback = document.getElementById("photoFallback");
 const dotsElement = document.getElementById("galleryDots");
 
 function renderDots() {
   dotsElement.innerHTML = "";
+
   memoriesData.forEach((memory, index) => {
     const dot = document.createElement("button");
+
     dot.className = "dot" + (index === currentPhoto ? " active" : "");
     dot.setAttribute("aria-label", "Show photo " + (index + 1));
+
     dot.addEventListener("click", () => {
       currentPhoto = index;
       renderPhoto();
     });
+
     dotsElement.appendChild(dot);
   });
 }
+
 function renderPhoto() {
   const memory = memoriesData[currentPhoto];
+
   document.getElementById("memoryTitle").textContent = memory.title;
-  document.getElementById("memoryDescription").textContent = memory.description;
+  document.getElementById("memoryDescription").textContent =
+    memory.description;
+
   fallback.style.display = "none";
   imageElement.style.display = "block";
   imageElement.alt = memory.title;
+
   imageElement.onerror = () => {
     imageElement.style.display = "none";
     fallback.style.display = "flex";
   };
+
   imageElement.src = memory.image;
   renderDots();
 }
+
 document.getElementById("previousPhoto").addEventListener("click", () => {
   currentPhoto = (currentPhoto - 1 + memoriesData.length) % memoriesData.length;
   renderPhoto();
 });
+
 document.getElementById("nextPhoto").addEventListener("click", () => {
   currentPhoto = (currentPhoto + 1) % memoriesData.length;
   renderPhoto();
 });
-renderPhoto();
 
-/* YES fireworks */
+renderPhoto();/* YES fireworks */
 function launchFireworks() {
   const symbols = ["💖", "💜", "✨", "💕", "🎉", "🌸"];
+
   for (let i = 0; i < 55; i++) {
     const particle = document.createElement("span");
+
     particle.className = "firework";
-    particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
     particle.style.left = (10 + Math.random() * 80) + "vw";
     particle.style.top = (30 + Math.random() * 40) + "vh";
     particle.style.setProperty("--dx", (Math.random() * 240 - 120) + "px");
     particle.style.setProperty("--dy", (Math.random() * 300 - 150) + "px");
     particle.style.animationDelay = (Math.random() * .5) + "s";
+
     document.body.appendChild(particle);
     setTimeout(() => particle.remove(), 2400);
   }
 }
+
 document.getElementById("yesBtn").addEventListener("click", () => {
   document.getElementById("celebration").textContent =
     "Yay! 💖 Here's to more smiles, memories, and little moments together! ✨";
+
   launchFireworks();
 });
 
-/* Playful NO button: moves away on hover or touch.
-   It remains a harmless playful button; no forced answer. */
+/* Playful NO button */
 const noBtn = document.getElementById("noBtn");
 let noMoves = 0;
+
 function moveNoButton() {
   noMoves++;
+
   const dx = Math.round(Math.random() * 150 - 75);
   const dy = Math.round(Math.random() * 90 - 45);
+
   noBtn.style.transform = `translate(${dx}px, ${dy}px)`;
+
   if (noMoves > 3) {
     noBtn.textContent = ["Too slow 🙈", "Hehe 💜", "Catch me! ✨"][noMoves % 3];
   }
 }
+
 noBtn.addEventListener("pointerenter", event => {
   if (event.pointerType === "mouse") moveNoButton();
 });
+
 noBtn.addEventListener("touchstart", event => {
   event.preventDefault();
   moveNoButton();
 }, { passive: false });
+
 noBtn.addEventListener("click", moveNoButton);
 </script>
+
 </body>
 </html>
